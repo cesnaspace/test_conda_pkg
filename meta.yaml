@@ -1,0 +1,19 @@
+package:
+  name: "test_conda_pkg"
+  version: "1.0"
+
+source:
+  git_url: https://github.com/cesnaspace/test_conda_pkg.git
+
+requirements:
+  build:
+    - {{ compiler('c') }}
+    - {{ compiler('cxx') }}
+    - libstdcxx-ng
+    - make
+
+build:
+  number: 0
+
+about:
+  home: https://github.com/cesnaspace/test_conda_pkg

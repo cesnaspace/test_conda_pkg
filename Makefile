@@ -1,13 +1,13 @@
-CC=g++
+CXX=g++
 OBJ = main.o
 SRC = src
 BUILD_DIR = build
 
 main: $(BUILD_DIR)/$(OBJ) | $(BUILD_DIR)
-	$(CC) -o $@ $^
+	$(CXX) -o $@ $^
 
 $(BUILD_DIR)/%.o: $(SRC)/%.cpp | $(BUILD_DIR)
-	$(CC) -c -o $@ $<
+	$(CXX) -c -o $@ $<
 
 $(BUILD_DIR):
 	mkdir -p $(BUILD_DIR)
